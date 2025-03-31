@@ -92,9 +92,9 @@
             left: 0;
             width: 100%;
             height: auto;
-            z-index: 0;
+            z-index: -2;
             object-fit: cover;
-            opacity: 0.7; /* 调整透明度 */
+            opacity: 1; /* 调整透明度 */
         }
         .fixed-imagex {
             position: fixed;
@@ -102,9 +102,9 @@
             left: 0;
             width: 100%;
             height: auto;
-            z-index: 0;
+            z-index: -1;
             object-fit: cover;
-            opacity: 0.7; /* 调整透明度 */
+            opacity: 1; /* 调整透明度 */
         }
 
         .enter-button {
@@ -173,17 +173,14 @@
     <!-- 底部图片 -->
     <img src="https://picx.zhimg.com/80/v2-66df1dcc9476ebc1a84d14437b718b4c.png" class="fixed-imagex" id="bottomImage" alt="底部图片">
 
-    <!-- 正常环境下的第一张卡片 -->
     <div class="neumorphic-card">
         <p class="tip-text">请确认您的状态</p>
         <div class="url-display">免责声明：本站仅服务非中国公民，未满当地法定年龄的公民禁止浏览本站，否则造成的一切影响本网站不承担任何法律责任！</div>
         <button class="enter-button" id="adultButton">我已成年</button>
         <button class="enter-button transparent-button" id="minorButton">我未成年</button>
-        <button class="enter-button transparent-button" id="buddhistButton">佛教信徒</button>
         <div class="url-display" id="targetUrl"></div>
     </div>
 
-    <!-- 正常环境下的第二张卡片 -->
     <div class="new-card">
         <div class="text-container">
             <div class="small-text">所谓饱腹思淫欲，不然点个外卖先</div>
@@ -226,7 +223,7 @@
             const minorButton = document.getElementById('minorButton');
             if (minorButton) {
                 minorButton.addEventListener('click', () => {
-                    const searchUrl = 'https://www.baidu.com/s?wd=' + encodeURIComponent('色情作品对未成年有哪些危害');
+                    const searchUrl = 'https://www.baidu.com/s?wd=' + encodeURIComponent('作品对未成年有哪些危害');
                     window.location.href = searchUrl;
                 });
             }
